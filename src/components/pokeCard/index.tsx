@@ -5,14 +5,22 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
-export default function MultiActionAreaCard({ name }: any) {
+export default function MultiActionAreaCard({ name, image, types }: any) {
+  const multipleTypes = (types: any) => {
+    if (types[1]) {
+      return types[0].type.name + " " + types[1].type.name;
+    } else {
+      return types[0].type.name;
+    }
+  };
+
   return (
     <Card sx={{ maxWidth: 345, marginRight: "1em", marginBottom: "1em" }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          height="250"
+          image={image}
           alt="green iguana"
         />
         <CardContent>
@@ -20,8 +28,7 @@ export default function MultiActionAreaCard({ name }: any) {
             {name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {multipleTypes(types)}
           </Typography>
         </CardContent>
       </CardActionArea>

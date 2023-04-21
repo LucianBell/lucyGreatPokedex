@@ -18,11 +18,26 @@ export default function Home() {
   }, []);
 
   const getPokemons = () => {
-    axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
-      .then((res) => setPokemons(res.data.results))
+    let endpoints = [];
+
+    for (let i = 1; i < 152; i++) {
+      endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+    }
+
+    console.log(endpoints);
+
+    let response = axios
+      .all(endpoints.map((endpoint) => axios.get(endpoint)))
+      .then((res) => setPokemons(res))
       .catch((err) => console.log(err));
+    return response;
+
+    //axios
+    //  .get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
+    //  .then((res) => setPokemons(res.data.results))
+    //  .catch((err) => console.log(err));
   };
+
   return (
     <>
       <Head>
@@ -34,10 +49,14 @@ export default function Home() {
       <main>
         <SearchAppBar />
         <section>
-          <Container>
+          <Container maxWidth="xl">
             <div className={styles.divLine}>
-              {pokemons.map((pokemon) => (
-                <MultiActionAreaCard name={pokemon.name} />
+              {pokemons.map((pokemon: any) => (
+                <MultiActionAreaCard
+                  name={pokemon.data.name}
+                  image={pokemon.data.sprites.front_default}
+                  types={pokemon.data.types}
+                />
               ))}
             </div>
           </Container>
