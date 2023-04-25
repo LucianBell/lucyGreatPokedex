@@ -3,11 +3,10 @@ import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+import styles from "@/styles/Home.module.scss";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -51,29 +50,26 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar({ searchPokemon }: any) {
   return (
     <Box sx={{ flexGrow: 1, marginBottom: "2em" }}>
-      <AppBar position="static">
+      <AppBar className={styles.navBarBg} position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography
             variant="h6"
             noWrap
             component="div"
+            className={styles.navBarTitle}
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            Lucy's Great Pokedex
           </Typography>
-          <Search>
+          <Search
+            className={styles.searchBox}
+            onChange={(e) =>
+              searchPokemon((e.target as HTMLTextAreaElement).value)
+            }
+          >
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>

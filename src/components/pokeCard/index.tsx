@@ -4,6 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import styles from "@/styles/Home.module.scss";
 
 export default function MultiActionAreaCard({ name, image, types }: any) {
   const multipleTypes = (types: any) => {
@@ -21,19 +22,28 @@ export default function MultiActionAreaCard({ name, image, types }: any) {
           component="img"
           height="250"
           image={image}
-          alt="green iguana"
+          alt="Pokemon Sprite"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography
+            className={styles.name}
+            gutterBottom
+            variant="h5"
+            component="div"
+          >
             {name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            className={styles.typeName}
+            variant="body2"
+            color="text.secondary"
+          >
             {multipleTypes(types)}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
+      <CardActions className={styles.actionArea}>
+        <Button size="small" className={styles.shareBtn}>
           Share
         </Button>
       </CardActions>

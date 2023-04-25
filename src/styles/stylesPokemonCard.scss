@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
+
+.name {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.typeName {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: black;
+}
+
+.actionArea {
+  background-color: #f00000;
+}
+
+.shareBtn {
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+}
+
+.shareBtn:hover {
+  background-color: #fff;
+  color: #222224;
+}
