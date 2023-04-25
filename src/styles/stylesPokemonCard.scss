@@ -7,15 +7,145 @@
   letter-spacing: 2px;
 }
 
-.typeName {
+.typeGrass {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: green;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeFire {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #f00000;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeWater {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: blue;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeBug {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: lightgreen;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeNormal {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: gray;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typePoison {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: purple;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeElectric {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: yellow;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeGround {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #964b00;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeFairy {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: pink;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeFight {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: lightcoral;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typePsychic {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #625981;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeRock {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: lightgray;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeGhost {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #301934;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeIce {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: lightblue;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeDragon {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: darkblue;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeSteel {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #c0c0c0;
+  text-shadow: 2px 2px 8px #5b5b58;
+}
+
+.typeDark {
   font-family: "Montserrat";
   text-transform: capitalize;
   font-size: 15px;
   color: black;
+  text-shadow: 2px 2px 8px #5b5b58;
 }
 
 .actionArea {
   background-color: #f00000;
+  justify-content: space-between;
 }
 
 .shareBtn {

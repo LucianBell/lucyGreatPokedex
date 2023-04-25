@@ -36,14 +36,17 @@ export default function Home() {
   const searchPokemon = (searchedPokemon: any) => {
     let searchMatch = [];
 
-    for (let i = 1; i < pokemons.length; i++) {
+    if (searchedPokemon === "") {
+      getPokemons();
+    }
+
+    for (let i in pokemons) {
       if (pokemons[i].data.name.startsWith(searchedPokemon)) {
         searchMatch.push(pokemons[i]);
       }
     }
 
     setPokemons(searchMatch);
-    console.log(searchMatch);
   };
 
   return (
