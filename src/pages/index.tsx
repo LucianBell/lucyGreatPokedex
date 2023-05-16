@@ -7,6 +7,7 @@ import MultiActionAreaCard from "@/components/pokeCard";
 import { Container } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,11 +64,13 @@ export default function Home() {
           <Container maxWidth="xl">
             <div className={styles.divLine}>
               {pokemons.map((pokemon: any) => (
-                <MultiActionAreaCard
-                  name={pokemon.data.name}
-                  image={pokemon.data.sprites.front_default}
-                  types={pokemon.data.types}
-                />
+                <Link href={`/pokemon/${pokemon.data.name}`} target="_blank">
+                  <MultiActionAreaCard
+                    name={pokemon.data.name}
+                    image={pokemon.data.sprites.front_default}
+                    types={pokemon.data.types}
+                  />
+                </Link>
               ))}
             </div>
           </Container>

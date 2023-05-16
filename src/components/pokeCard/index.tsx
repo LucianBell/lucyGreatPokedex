@@ -7,6 +7,7 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import styles from "@/styles/Home.module.scss";
 import { green } from "@mui/material/colors";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import Link from "next/link";
 
 export default function MultiActionAreaCard({ name, image, types }: any) {
   const multipleTypes = (types: any) => {
