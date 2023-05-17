@@ -1,5 +1,6 @@
 import React from "react";
 import SearchAppBar from "@/components/navBar";
+import styles from "@/styles/Home.module.scss";
 
 export default function Pokemon({ pokemon }: any) {
   const renderStats = () => {
@@ -10,21 +11,35 @@ export default function Pokemon({ pokemon }: any) {
     });
   };
 
+  const rightPokemonIndex = ("000" + pokemon.id).slice(-3);
+
   return (
     <>
       <main>
         <SearchAppBar />
-        <p>{pokemon.id}</p>
-        <img src={pokemon.sprites.front_default}></img>
-        <h1>{pokemon.name}</h1>
-        <h2>Important Data</h2>
+        <p className={styles.indexTitle}>{rightPokemonIndex}</p>
+        <img
+          src={pokemon.sprites.front_default}
+          className={styles.sprite}
+        ></img>
+        <h1 className={styles.pokemonName}>{pokemon.name}</h1>
+        <h2 className={styles.importantDataTitle}>Important Data</h2>
 
-        <ul>
+        <ul className={styles.listData}>
           <li>Weight: {pokemon.weight} kilos</li>
         </ul>
 
-        <h2>Stats</h2>
-        {renderStats()}
+        <div className={styles.divPage}>
+          <h2 className={styles.importantDataTitle}>Stats</h2>
+          {renderStats()}
+
+          <h2 className={styles.importantDataTitleShiny}>Shiny Variation:</h2>
+        </div>
+        <img
+          src={pokemon.sprites.front_shiny}
+          alt="Pokemon's shiny version"
+          className={styles.shinySprite}
+        />
       </main>
     </>
   );

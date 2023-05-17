@@ -1,0 +1,53 @@
+.indexTitle {
+  font-family: "Montserrat";
+  font-size: 300px;
+  text-align: center;
+  margin-top: 10px;
+  color: gray;
+}
+
+.sprite {
+  width: 20%;
+  margin: 0 40%;
+  margin-top: -30em;
+}
+
+.pokemonName {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -30px;
+  font-size: 80px;
+}
+
+.importantDataTitle {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  margin-left: 50px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.listData {
+  font-family: "Montserrat";
+  text-transform: capitalize;
+  margin-left: 70px;
+}
+
+.divPage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.importantDataTitleShiny {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-right: 50px;
+}
+
+.shinySprite {
+  width: 15%;
+  margin-left: 82vw;
+}
