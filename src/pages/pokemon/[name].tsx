@@ -27,6 +27,7 @@ export default function Pokemon({ pokemon }: any) {
 
         <ul className={styles.listData}>
           <li>Weight: {pokemon.weight} kilos</li>
+          <li>Height: {pokemon.height} centimeters</li>
         </ul>
 
         <div className={styles.divPage}>
