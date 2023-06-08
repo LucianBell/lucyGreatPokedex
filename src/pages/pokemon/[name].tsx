@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import SearchAppBar from "@/components/navBar";
 import styles from "@/styles/Home.module.scss";
 
@@ -24,10 +25,11 @@ export default function Pokemon({ pokemon }: any) {
       <main>
         <SearchAppBar />
         <p className={styles.indexTitle}>{rightPokemonIndex}</p>
-        <img
+        <Image
           src={pokemon.sprites.front_default}
           className={styles.sprite}
-        ></img>
+          alt="Pokemon sprite"
+        />
         <h1 className={styles.pokemonName}>{pokemon.name}</h1>
         <h2 className={styles.importantDataTitle}>Important Data</h2>
 
@@ -42,7 +44,7 @@ export default function Pokemon({ pokemon }: any) {
 
           <h2 className={styles.importantDataTitleShiny}>Shiny Variation:</h2>
         </div>
-        <img
+        <Image
           src={pokemon.sprites.front_shiny}
           alt="Pokemon's shiny version"
           className={styles.shinySprite}
