@@ -62,7 +62,7 @@ export default function SearchAppBar({ searchPokemon }: any) {
             className={styles.navBarTitle}
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            Lucy's Great Pokedex
+            Lucy&apos;s Great Pokedex
           </Typography>
           <Search
             className={styles.searchBox}
