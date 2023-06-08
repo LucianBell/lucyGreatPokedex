@@ -5,11 +5,17 @@ import styles from "@/styles/Home.module.scss";
 export default function Pokemon({ pokemon }: any) {
   const renderStats = () => {
     return pokemon.stats.map((stat: any, index: any) => {
-      <div key={index} className="actionArea">
+      <div
+        key={index}
+        className={styles.statBox}
+        style={{ width: `${stat.base_stat}%` }}
+      >
         {stat.base_stat}
       </div>;
     });
   };
+
+  const rightHeight = pokemon.height * 10;
 
   const rightPokemonIndex = ("000" + pokemon.id).slice(-3);
 
@@ -27,7 +33,7 @@ export default function Pokemon({ pokemon }: any) {
 
         <ul className={styles.listData}>
           <li>Weight: {pokemon.weight} kilos</li>
-          <li>Height: {pokemon.height} centimeters</li>
+          <li>Height: {rightHeight} centimeters</li>
         </ul>
 
         <div className={styles.divPage}>
